@@ -8,4 +8,4 @@ RUN         apk update &&                                 \
             echo 'listen on *' >> /etc/ntpd.conf &&       \
             rm -rf /var/cache/apk/*
 EXPOSE      123/udp
-ENTRYPOINT  ["ntp", "-s", "-d"]
+ENTRYPOINT  ["ntpd", "-s", "-d"]
